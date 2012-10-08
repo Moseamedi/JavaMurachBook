@@ -1,6 +1,6 @@
 import java.text.NumberFormat;
 
-public class Product
+public class Product 
 {
     private String code;
     private String description;
@@ -18,6 +18,19 @@ public class Product
         this.code = code;
         this.description = description;
         this.price = price;
+    }
+    
+    @Override
+    public void getDisplayText(){
+        String code = getCode();
+        String desc = getDescription();
+        String price = getFormattedPrice();
+        System.out.print(code);
+        System.out.print(" | ");
+        System.out.print(desc);
+        System.out.print(" | ");
+        System.out.println(price);
+
     }
 
     public void setCode(String code)

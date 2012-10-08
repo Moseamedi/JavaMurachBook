@@ -1,4 +1,4 @@
-public class ProductCloneApp
+public class ProductCloneApp implements Cloneable
 {
     public static void main(String args[]) throws CloneNotSupportedException
     {
@@ -11,7 +11,8 @@ public class ProductCloneApp
         p1.setPrice(49.50);
 
         // clone the product
-        Product p2 = (Product) p1.clone();
+        Product p2;
+        p2 = (Product) p1.clone();
 
         // change a value in the cloned product
         p2.setPrice(44.50);

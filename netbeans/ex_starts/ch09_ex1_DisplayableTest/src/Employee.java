@@ -1,4 +1,4 @@
-public class Employee
+public class Employee implements DepartmentConstants,Displayable 
 {
     private int department;
     private String firstName;
@@ -12,5 +12,10 @@ public class Employee
         this.lastName = lastName;
         this.firstName = firstName;
         this.salary = salary;
+    }
+
+    @Override
+    public String getDisplayText() {
+        
     }
 }

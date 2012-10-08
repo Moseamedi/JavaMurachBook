@@ -86,6 +86,27 @@ public class ProductMaintApp
     {
         String code = Validator.getString(sc,
             "Enter product code to update: ");
+        
+        Product p = productDAO.getProduct(code);
+        
+        System.out.println("What do you want to update?");
+        System.out.println("1 - Product Description");
+        System.out.println("2 - Product Price");
+        
+        Integer selection = Validator.getInt(sc,
+                "Enter a command: ");
+        if (selection == 1){
+            System.out.println("You want to update the Product Description");
+            String newDescription = Validator.getLine(sc, "Enter new description");
+            p.setDescription(newDescription);
+        } else if (selection == 2){
+            System.out.println("You want to update the Product Price");
+            double newPrice = Validator.getDouble(sc, "Enter new Price");
+            p.setPrice(newPrice);
+        }else{
+            System.out.println("That isn't a valid selection");
+            updateProduct();
+        }
     }
 
     public static void deleteProduct()
