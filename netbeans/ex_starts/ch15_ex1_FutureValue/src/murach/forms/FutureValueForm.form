@@ -117,9 +117,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="yearlyIntRateText">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField2"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -127,9 +124,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="numYearsText">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField3"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
@@ -139,7 +133,6 @@
         <Component class="javax.swing.JTextField" name="futureValueText">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
-            <Property name="text" type="java.lang.String" value="jTextField4"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnCalculate">

@@ -4,6 +4,7 @@
  */
 package murach.forms;
 import java.text.NumberFormat;
+import murach.business.FinancialCalculations;
 
 
 /**
@@ -46,16 +47,11 @@ public class FutureValueForm extends javax.swing.JFrame {
 
         jLabel2.setText("Yearly Interest Rate:");
 
-        yearlyIntRateText.setText("jTextField2");
-
         jLabel3.setText("Number of Years: ");
-
-        numYearsText.setText("jTextField3");
 
         jLabel4.setText("Future Value: ");
 
         futureValueText.setEditable(false);
-        futureValueText.setText("jTextField4");
 
         btnCalculate.setText("Calculate");
         btnCalculate.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +136,11 @@ public class FutureValueForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
-        // TODO add your handling code here:
+        int monthlyPayments = Integer.parseInt(monthlyPaymentsText.getText());
+        int numYears = Integer.parseInt(numYearsText.getText());
+        double yearlyIntRate = Double.parseDouble(yearlyIntRateText.getText());
+        double fv = FinancialCalculations.calculateFutureValue(monthlyPayments, yearlyIntRate, numYears);
+       futureValueText.setText(Double.toString(fv));
     }//GEN-LAST:event_btnCalculateActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
